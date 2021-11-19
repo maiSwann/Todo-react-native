@@ -10,6 +10,11 @@ const LoginScreen = ({navigation}) => {
             ></Image>
         })
     }, []);
+
+    const navigateToHomeScreen = () => {
+        navigation.navigate('HomeScreen')
+    }
+
     return (
         <View style={styles.container}>
             <Text style={styles.inputTitle}>Email</Text>
@@ -25,13 +30,13 @@ const LoginScreen = ({navigation}) => {
             <Text></Text>
             <TouchableOpacity
                 style={styles.touchableLoginButton}
-                // onPress={onPress}
+                onPress={navigateToHomeScreen}
             >
                 <Text style={styles.touchableText}>LogIn</Text>
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.touchableRegisterButton}
-                // onPress={onPress}
+                onPress={navigateToHomeScreen}
             >
                 <Text style={styles.touchableText}>Register</Text>
             </TouchableOpacity>
@@ -60,6 +65,7 @@ const styles = StyleSheet.create({
     },
     touchableLoginButton: {
         alignItems: "center",
+        justifyContent: 'center',
         backgroundColor: "#CEE5D0",
         padding: 10,
         width: 194,
@@ -68,6 +74,7 @@ const styles = StyleSheet.create({
     },
     touchableRegisterButton: {
         alignItems: "center",
+        justifyContent: 'center',
         backgroundColor: "#FFBF86",
         padding: 10,
         width: 194,
@@ -77,7 +84,7 @@ const styles = StyleSheet.create({
     },
     touchableText: {
         color: "#FFFFFF",
-        fontSize: 20,
+        fontSize: 20
     },
 });
 

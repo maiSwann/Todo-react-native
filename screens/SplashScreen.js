@@ -3,10 +3,10 @@ import { View, Image, StyleSheet } from 'react-native'
 
 const SplashScreen = ({navigation}) => {
     useEffect(() => {
-        setTimeout(() => {load()}, 2000)
+        setTimeout(() => {navigateToLoginScreen()}, 2000)
     }, []);
 
-    const load = () => {
+    const navigateToLoginScreen = () => {
         navigation.navigate('LoginScreen')
     }
     return (
