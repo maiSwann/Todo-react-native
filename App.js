@@ -19,7 +19,9 @@ export default function App() {
           headerBackVisible: false,
           headerLargeTitle: true,
           }} />
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} options={{
+          headerBackVisible: false
+          }} />
         <Stack.Screen name="SideMenuScreen" component={SideMenuScreen} />
       </Stack.Navigator>
     </NavigationContainer>
