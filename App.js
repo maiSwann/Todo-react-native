@@ -22,7 +22,9 @@ export default function App() {
         <Stack.Screen name="HomeScreen" component={HomeScreen} options={{
           headerBackVisible: false
           }} />
-        <Stack.Screen name="SideMenuScreen" component={SideMenuScreen} />
+        <Stack.Screen name="SideMenuScreen" component={SideMenuScreen} options={{
+          headerShown: false
+          }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
